@@ -9,19 +9,24 @@
             text-align: left;
             width: 350px;
             margin:30px auto ;
-            padding:5px;
+            padding:10px;
         }
         .c{
             text-align: center;
         }
+        #b{
+            background-color: darkorange;
+            border:5px;
+            border-radius: 5px;
+        }
         #b:hover{
-            background-color: bisque;
+            background-color:orange;
         }
     </style>
 </head>
 <body>
     <h1 class = "c">Login</h1>
-    <div id = "maindiv">
+    <div id = "maindiv" style = "border-radius: 10px;">
         <div><label>Username:</label>
             <input type = "text" minlength="3" value = "" >
             </div>
@@ -32,7 +37,7 @@
         </div>
         <br />
         <div class="c">
-            <button id = "b"  type = "button" style = "border-radius: 10px;">Login</button>
+            <button id = "b"  type = "button" >Login</button>
         </div>
     </div>
     <div class ="c">
