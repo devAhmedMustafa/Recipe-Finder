@@ -44,3 +44,31 @@ ul, ol {
     list-style: none;
     padding: 0;
 }
+
+.ingredients ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1.2rem;
+}
+
+.ingredients ul li {
+    border: 2px solid #fac19b;
+    background-color: #f76d12;
+    padding: 4px 12px;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+.instructions ol {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 1.2rem;
+}
+
+.instructions ol li {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 0.8rem;
+}
