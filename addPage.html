@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feastly - Add Recipe</title>
+    <link rel="stylesheet" href="addstyles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Feastly - Add Recipe</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="course">Course Name</label>
+            <select id="course" name="course">
+                <option value="appetizers">Appetizers</option>
+                <option value="main_course">Main Course</option>
+                <option value="desserts">Desserts</option>
+            </select>
+            
+            <label for="ingredients">Ingredients</label>
+            <div class="ingredients-container">
+                <input type="text" id="ingredient" placeholder="Ingredient">
+                <input type="number" id="quantity" placeholder="Qty" min="1">
+                <button type="button" onclick="addIngredient()">+</button>
+            </div>
+            <ul id="ingredients-list"></ul>
+            
+            <label for="description">Description</label>
+            <input type="text" id="description" name="description">
+            
+            <button type="submit">Submit Recipe</button>
+        </form>
+    </div>
+
+    <script>
+        function addIngredient() {
+            const ingredient = document.getElementById("ingredient").value;
+            const quantity = document.getElementById("quantity").value;
+            if (ingredient && quantity) {
+                const list = document.getElementById("ingredients-list");
+                const li = document.createElement("li");
+                li.textContent = `${ingredient} - ${quantity}`;
+                list.appendChild(li);
+                document.getElementById("ingredient").value = "";
+                document.getElementById("quantity").value = "";
+            }
+        }
+    </script>
+</body>
+</html>
