@@ -7,9 +7,19 @@
     <link rel="stylesheet" href="addstyles.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="recipes_list.html">Home</a></li>
+        <li><a href="addPage.html">Add Recipe</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+
     <div class="container">
         <h2>Feastly - Add Recipe</h2>
-        <form>
+        <form id="recipe-form">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
             
@@ -31,7 +41,7 @@
             <label for="description">Description</label>
             <input type="text" id="description" name="description">
             
-            <button type="submit">Submit Recipe</button>
+            <button type="submit">Add Recipe</button>
         </form>
     </div>
 
@@ -43,6 +53,19 @@
                 const list = document.getElementById("ingredients-list");
                 const li = document.createElement("li");
                 li.textContent = `${ingredient} - ${quantity}`;
+                
+                const deleteBtn = document.createElement("button");
+                deleteBtn.textContent = "X";
+                deleteBtn.style.marginLeft = "10px";
+                deleteBtn.style.background = "red";
+                deleteBtn.style.color = "white";
+                deleteBtn.style.border = "none";
+                deleteBtn.style.cursor = "pointer";
+                deleteBtn.onclick = function () {
+                    list.removeChild(li);
+                };
+                
+                li.appendChild(deleteBtn);
                 list.appendChild(li);
                 document.getElementById("ingredient").value = "";
                 document.getElementById("quantity").value = "";

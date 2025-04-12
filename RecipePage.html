@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="RecipePage.css">
-    <title>Recipe Page</title>
+    <title>Feastly - Recipe Details</title>
 </head>
 <body>
-    
-    <h1 class="header">Feastly - Recipe Finder</h1>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="recipes_list.html">Home</a></li>
+        <li><a href="addPage.html">Add Recipe</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+
     <!-- <div class="background"></div> -->
 
     <div class="container">
@@ -47,6 +55,11 @@
             </ol>
         </div>
 
+        <div class="actions">
+            <button class="edit-btn" onclick="window.location.href='editPage.html'">Edit Recipe</button>
+            <button class="delete-btn">Delete Recipe</button>
+            <button class="favorite-btn" onclick="window.location.href='favorites.html'">Add to Favorites</button>
+        </div>
     </div>
 
 </body>

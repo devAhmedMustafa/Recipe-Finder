@@ -7,19 +7,121 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.recipe-details {
+    margin-bottom: 30px;
+}
+
+.recipe-details h2 {
+    color: #FF7622;
+    margin-top: 20px;
+}
+
+.recipe-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recipe-details li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.edit-btn {
+    background-color: #FF7622;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #e65d00;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.favorite-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.favorite-btn:hover {
+    background-color: #218838;
+}
+
 .header {
     padding: 20px;
     text-align: center;
     background-color: #f76d12;
     color: white;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 1rem;
-    gap: 1.2rem;
 }
 
 .container > div > p:first-child {
