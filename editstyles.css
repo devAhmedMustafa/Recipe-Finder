@@ -32,6 +32,10 @@ body {
     font-weight: bold;
 }
 
+.navbar ul li a.active {
+    color: #FF7622;
+}
+
 .container {
     background: #fff;
     padding: 20px;

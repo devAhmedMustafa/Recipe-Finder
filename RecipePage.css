@@ -40,6 +40,10 @@ body {
     font-weight: bold;
 }
 
+.navbar ul li a.active {
+    color: #FF7622;
+}
+
 .container {
     max-width: 800px;
     margin: 20px auto;

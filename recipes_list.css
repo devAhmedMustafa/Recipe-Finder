@@ -28,6 +28,10 @@
   font-weight: bold;
 }
 
+.navbar ul li a.active {
+  color: #FF7622;
+}
+
 h1 {
   text-align: center;
   color: #2c3e50;
