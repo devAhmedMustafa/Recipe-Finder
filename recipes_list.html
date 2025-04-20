@@ -19,7 +19,7 @@
 
     <h1>All Recipes</h1>
 
-    <div class="recipes-container">
+    <div id = "big-container" class="recipes-container">
       <div class="recipe-card">
         <h2>Spaghetti Bolognese</h2>
         <p><strong>Course:</strong> Main Course</p>
@@ -130,5 +130,30 @@
         </div>
       </div>
     </div>
-  </body>
+    <script>
+      function putdata(recipe) {
+        const newdiv = document.createElement("div");
+        const container = document.getElementById("big-container");
+    
+        newdiv.className = "recipe-card";
+    
+        newdiv.innerHTML = `
+          <h2>${recipe.name}</h2>
+          <p><strong>Course:</strong> ${recipe.crsname}</p>
+          <p><strong>Ingredients:</strong> ${recipe.ingred}</p>
+          <p class="description">${recipe.decrib}</p>
+          <div class="card-actions">
+            <a href="RecipePage.html" class="details-btn">View Details</a>
+            <a href="editPage.html" class="edit-btn">Edit</a>
+          </div>
+        `;
+    
+        container.appendChild(newdiv);
+      }
+    
+      const alldata = JSON.parse(localStorage.getItem("saved_data")) || [];
+    
+      alldata.forEach(putdata);
+    </script>
+      </body>
 </html>
