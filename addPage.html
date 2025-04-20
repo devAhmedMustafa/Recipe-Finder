@@ -83,11 +83,13 @@
             });
             const ingred = JSON.stringify(ingredient);
             const decrib = document.getElementById("description").value;
+            if(name && crsname && ingred && decrib){
             const alldata = { name, crsname, ingred, decrib };
             const recipes = JSON.parse(localStorage.getItem("saved_data")) || [];
             recipes.push(alldata);
             localStorage.setItem("saved_data", JSON.stringify(recipes));
             window.location.href = "recipes_list.html";
+            }
         }
         
     </script>
