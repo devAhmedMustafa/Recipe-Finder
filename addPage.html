@@ -42,7 +42,7 @@
             <label for="description">Description</label>
             <input type="text" id="description" name="description">
             
-            <button type="submit">Add Recipe</button>
+            <button type="submit" onclick="addrecipe()">Add Recipe</button>
         </form>
     </div>
 
@@ -72,6 +72,24 @@
                 document.getElementById("quantity").value = "";
             }
         }
+        function addrecipe(){
+            const name = document.getElementById("name").value;
+            const crsname = document.getElementById("course").value;
+            const ingredientlist = document.querySelectorAll("#ingredients-list li");
+            const ingredient = [];
+            ingredientlist.forEach(element => {
+                let text = element.textContent.split(" - ");
+                ingredient.push(text[0]);
+            });
+            const ingred = JSON.stringify(ingredient);
+            const decrib = document.getElementById("description").value;
+            const alldata = { name, crsname, ingred, decrib };
+            const recipes = JSON.parse(localStorage.getItem("saved_data")) || [];
+            recipes.push(alldata);
+            localStorage.setItem("saved_data", JSON.stringify(recipes));
+            window.location.href = "recipes_list.html";
+        }
+        
     </script>
 </body>
 </html>
